@@ -2,9 +2,11 @@ import autoUpdater from '@suen/electron-updater'
 
 export default function initUpdater() {
     const updater = autoUpdater({
-        type: 'custom',
+        type: 'github',
         options: {
-            url: 'https://gist.githubusercontent.com/sunzongzheng/e7b502eee0610e316ddaa6b40ea2e5c7/raw/'
+            username: 'huangshihai',
+            repo: 'music',
+            log: true // will emit log event
         }
     })
     updater.__judgeUpdater = async (includeLinux = false) => {
